@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -70,6 +71,10 @@ export default {
 					gray: '#6B7280',
 					'gray-light': '#F3F4F6'
 				}
+			},
+			fontFamily: {
+				'lato': ['Lato', 'sans-serif'],
+				'sans': ['Lato', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

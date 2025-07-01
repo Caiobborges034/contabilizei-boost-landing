@@ -52,7 +52,7 @@ const HeroSection = () => {
             <Button 
               onClick={handleConsultoriaClick}
               size="lg"
-              className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-white font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in"
+              className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in"
             >
               💡 Quero Minha Consultoria Gratuita!
             </Button>
@@ -64,7 +64,7 @@ const HeroSection = () => {
         </div>
       </section>
       
-      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormStore(false)} />
+      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </>
   );
 };

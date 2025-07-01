@@ -1,6 +1,6 @@
 
 import { Card } from "@/components/ui/card";
-import { Calculator, TrendingUp, Heart, Megaphone, Shield } from "lucide-react";
+import { Calculator, TrendingUp, Heart, Megaphone, Shield, Cross } from "lucide-react";
 
 const BenefitsSection = () => {
   const benefits = [
@@ -8,33 +8,51 @@ const BenefitsSection = () => {
       icon: Calculator,
       title: "Contabilidade e Impostos",
       description: "Consultoria totalmente gratuita para te ajudar a sanar dúvidas e direcionar a resolução de problemas contábeis.",
-      highlight: "100% Gratuito"
+      highlight: "100% Gratuito",
+      link: "/contabilidade"
     },
     {
       icon: TrendingUp,
       title: "Organização Financeira",
       description: "Acompanhamento com 3 reuniões, de R$ 400, por apenas R$ 150, com acompanhamento próximo pelo consultor.",
-      highlight: "62% de Desconto"
+      highlight: "62% de Desconto",
+      link: "/organizacao-financeira"
     },
     {
       icon: Heart,
       title: "Saúde e Bem-estar",
       description: "Acesso ao Total Pass (academias e exercícios em todo o Brasil) no plano multibenefícios sem acréscimo na mensalidade por 2 meses.",
-      highlight: "2 Meses Grátis"
+      highlight: "2 Meses Grátis",
+      link: "/saude-bem-estar"
     },
     {
       icon: Megaphone,
       title: "Marketing e Digital",
       description: "Criação de Website Gratuito e gerenciamento de redes sociais com condições especiais.",
-      highlight: "Website Gratuito"
+      highlight: "Website Gratuito",
+      link: "/marketing-digital"
     },
     {
       icon: Shield,
       title: "Proteção e Seguridade",
       description: "Garanta seguros com a Contabilizei e obtenha descontos de até R$ 20 na mensalidade por 12 meses.",
-      highlight: "R$ 240 de Economia"
+      highlight: "Economize até R$ 240/ano",
+      link: "/protecao-seguridade"
+    },
+    {
+      icon: Cross,
+      title: "Plano de Saúde e Odontológico",
+      description: "Condições especiais para contratação via CNPJ (até 30% mais barato do que contratar na PF).",
+      highlight: "Até 30% de Desconto",
+      link: "/plano-saude"
     }
   ];
+
+  const handleBenefitClick = (link: string) => {
+    console.log(`Clique no benefício: ${link}`);
+    // Aqui você pode implementar o tracking de cliques
+    window.open(link, '_blank');
+  };
 
   return (
     <section className="py-16 bg-gray-50">
@@ -52,19 +70,20 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <Card 
               key={index} 
-              className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in bg-white border-l-4 border-l-contabilizei-orange relative"
+              className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in bg-white border-l-4 border-l-contabilizei-orange relative cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => handleBenefitClick(benefit.link)}
             >
-              <div className="absolute top-4 right-4 bg-contabilizei-orange text-white text-xs font-bold px-2 py-1 rounded-full">
+              <div className="absolute top-2 right-2 bg-contabilizei-orange text-black text-xs font-bold px-2 py-1 rounded-full max-w-[120px] text-center leading-tight">
                 {benefit.highlight}
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg">
+              <div className="flex items-start space-x-4 mt-8">
+                <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-contabilizei-blue mb-2">{benefit.title}</h3>
-                  <p className="text-contabilizei-gray text-sm pr-16">{benefit.description}</p>
+                  <h3 className="font-semibold text-contabilizei-blue mb-2 pr-4">{benefit.title}</h3>
+                  <p className="text-contabilizei-gray text-sm">{benefit.description}</p>
                 </div>
               </div>
             </Card>

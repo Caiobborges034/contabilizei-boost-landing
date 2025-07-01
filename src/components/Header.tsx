@@ -7,6 +7,7 @@ const Header = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleConsultoriaClick = () => {
+    console.log('Clique no botão header');
     setIsFormOpen(true);
   };
 
@@ -24,7 +25,7 @@ const Header = () => {
           
           <Button 
             onClick={handleConsultoriaClick}
-            className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-white font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+            className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
           >
             Quero Minha Consultoria
           </Button>

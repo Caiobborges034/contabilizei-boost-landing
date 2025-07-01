@@ -9,6 +9,7 @@ const CTASection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleConsultoriaClick = () => {
+    console.log('Clique no botão CTA principal');
     setIsFormOpen(true);
   };
 
@@ -36,7 +37,7 @@ const CTASection = () => {
               {/* Benefícios listados */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-left max-w-2xl mx-auto">
                 {[
-                  "Diagnóstico completo do seu negócio",
+                  "Diagnóstico completo da sua vida além do CNPJ",
                   "Soluções personalizadas e parceiros exclusivos",
                   "Benefícios especiais apenas para participantes",
                   "Apoio em áreas além da contabilidade"
@@ -52,7 +53,7 @@ const CTASection = () => {
               <Button 
                 onClick={handleConsultoriaClick}
                 size="lg"
-                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-white font-bold px-12 py-6 text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6"
+                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-12 py-6 text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6"
               >
                 💡 Quero Minha Consultoria Gratuita Agora!
               </Button>

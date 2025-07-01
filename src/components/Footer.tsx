@@ -14,10 +14,10 @@ const Footer = () => {
           
           <div className="text-center md:text-right">
             <p className="text-blue-200 text-sm">
-              © 2024 Contabilizei. Consultoria exclusiva para convidados.
+              © 2025 Contabilizei. Consultoria exclusiva para convidados.
             </p>
             <p className="text-blue-300 text-xs mt-1">
-              Transformando negócios que vão além do CNPJ
+              Transforme sua vida com a Contabilizei
             </p>
           </div>
         </div>

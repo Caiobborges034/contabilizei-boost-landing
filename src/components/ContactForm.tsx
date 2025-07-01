@@ -24,13 +24,42 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     phone: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    
     console.log("Formulário enviado:", formData);
+    
+    // Simulação de envio para Google Sheets
+    // Substitua pela URL do seu Google Apps Script
+    try {
+      const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          timestamp: new Date().toISOString(),
+          source: 'Landing Page Consultoria'
+        }),
+      });
+      
+      if (response.ok) {
+        console.log('Dados enviados para Google Sheets com sucesso');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar dados para Google Sheets:', error);
+    }
+    
+    setIsLoading(false);
     setIsSubmitted(true);
     
-    // Simular envio e fechar após 2 segundos
+    // Fechar após 2 segundos
     setTimeout(() => {
       setIsSubmitted(false);
       onClose();
@@ -117,9 +146,10 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           
           <Button 
             type="submit" 
-            className="w-full bg-contabilizei-orange hover:bg-contabilizei-orange-light text-white font-bold py-3"
+            disabled={isLoading}
+            className="w-full bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold py-3"
           >
-            💡 Solicitar Minha Consultoria Gratuita
+            {isLoading ? '⏳ Enviando...' : '💡 Solicitar Minha Consultoria Gratuita'}
           </Button>
         </form>
       </DialogContent>

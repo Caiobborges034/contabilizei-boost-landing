@@ -3,24 +3,6 @@ import { Card } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 
 const SocialProofSection = () => {
-  const testimonials = [
-    {
-      text: "Ser ouvido é muito bom! Já fazia algum tempo que eu tinha vários pontos para comentar sobre a Contabilizei, que, de forma proativa, não daria essa visibilidade. Parabéns pela iniciativa.",
-      author: "Cliente Contabilizei",
-      business: "Consultoria Realizada"
-    },
-    {
-      text: "A consultoria da Contabilizei transformou completamente minha organização financeira. Recomendo!",
-      author: "Maria Silva",
-      business: "E-commerce"
-    },
-    {
-      text: "Consegui esclarecer várias dúvidas sobre impostos e ainda descobri benefícios que não conhecia.",
-      author: "João Santos",
-      business: "Consultoria"
-    }
-  ];
-
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -36,21 +18,17 @@ const SocialProofSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="p-6 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <Quote className="w-8 h-8 text-contabilizei-orange mb-4" />
-              <p className="text-contabilizei-gray mb-4 italic">"{testimonial.text}"</p>
-              <div className="border-t pt-4">
-                <p className="font-semibold text-contabilizei-blue">{testimonial.author}</p>
-                <p className="text-sm text-contabilizei-gray">{testimonial.business}</p>
-              </div>
-            </Card>
-          ))}
+        <div className="max-w-2xl mx-auto">
+          <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200">
+            <Quote className="w-8 h-8 text-contabilizei-orange mb-4 mx-auto" />
+            <p className="text-contabilizei-gray mb-4 italic text-center text-lg">
+              "Ser ouvido é muito bom! Já fazia algum tempo que eu tinha vários pontos para comentar sobre a Contabilizei, que, de forma proativa, não daria essa visibilidade. Parabéns pela iniciativa."
+            </p>
+            <div className="border-t pt-4 text-center">
+              <p className="font-semibold text-contabilizei-blue">Cliente Contabilizei</p>
+              <p className="text-sm text-contabilizei-gray">Consultoria Realizada</p>
+            </div>
+          </Card>
         </div>
 
         {/* Stats destacados */}
