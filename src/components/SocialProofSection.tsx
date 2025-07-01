@@ -5,6 +5,11 @@ import { Star, Quote } from "lucide-react";
 const SocialProofSection = () => {
   const testimonials = [
     {
+      text: "Ser ouvido é muito bom! Já fazia algum tempo que eu tinha vários pontos para comentar sobre a Contabilizei, que, de forma proativa, não daria essa visibilidade. Parabéns pela iniciativa.",
+      author: "Cliente Contabilizei",
+      business: "Consultoria Realizada"
+    },
+    {
       text: "A consultoria da Contabilizei transformou completamente minha organização financeira. Recomendo!",
       author: "Maria Silva",
       business: "E-commerce"
@@ -13,11 +18,6 @@ const SocialProofSection = () => {
       text: "Consegui esclarecer várias dúvidas sobre impostos e ainda descobri benefícios que não conhecia.",
       author: "João Santos",
       business: "Consultoria"
-    },
-    {
-      text: "Com as estratégias de marketing que me apresentaram, consegui atrair 40% mais clientes.",
-      author: "Ana Costa",
-      business: "Serviços"
     }
   ];
 
@@ -32,7 +32,7 @@ const SocialProofSection = () => {
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
             ))}
-            <span className="text-contabilizei-gray ml-2 font-medium">100% de Satisfação</span>
+            <span className="text-contabilizei-gray ml-2 font-medium">Avaliação média: 4.8</span>
           </div>
         </div>
 
@@ -65,7 +65,7 @@ const SocialProofSection = () => {
               <div className="text-blue-100">Taxa de Satisfação</div>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <div className="text-4xl font-bold text-contabilizei-orange mb-2">5★</div>
+              <div className="text-4xl font-bold text-contabilizei-orange mb-2">4.8★</div>
               <div className="text-blue-100">Avaliação Média</div>
             </div>
           </div>
