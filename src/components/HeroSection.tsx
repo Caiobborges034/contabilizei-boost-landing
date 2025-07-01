@@ -24,7 +24,7 @@ const HeroSection = () => {
             {/* Badge de urgência */}
             <div className="inline-flex items-center bg-contabilizei-orange/20 text-orange-100 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
               <Clock className="w-4 h-4 mr-2" />
-              Últimas Vagas Disponíveis
+              Vagas Limitadas
             </div>
 
             {/* Headline principal */}

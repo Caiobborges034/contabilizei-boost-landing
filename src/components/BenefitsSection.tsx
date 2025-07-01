@@ -29,21 +29,21 @@ const BenefitsSection = () => {
       icon: Megaphone,
       title: "Marketing e Digital",
       description: "Criação de Website Gratuito e gerenciamento de redes sociais com condições especiais.",
-      highlight: "Website Gratuito",
+      highlight: "Website Grátis",
       link: "/marketing-digital"
     },
     {
       icon: Shield,
       title: "Proteção e Seguridade",
       description: "Garanta seguros com a Contabilizei e obtenha descontos de até R$ 20 na mensalidade por 12 meses.",
-      highlight: "Economize até R$ 240/ano",
+      highlight: "Economize R$ 240/ano",
       link: "/protecao-seguridade"
     },
     {
       icon: Cross,
       title: "Plano de Saúde e Odontológico",
       description: "Condições especiais para contratação via CNPJ (até 30% mais barato do que contratar na PF).",
-      highlight: "Até 30% de Desconto",
+      highlight: "30% de Desconto",
       link: "/plano-saude"
     }
   ];
@@ -74,7 +74,7 @@ const BenefitsSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => handleBenefitClick(benefit.link)}
             >
-              <div className="absolute top-2 right-2 bg-contabilizei-orange text-black text-xs font-bold px-2 py-1 rounded-full max-w-[120px] text-center leading-tight">
+              <div className="absolute top-2 right-2 bg-contabilizei-orange text-black text-xs font-bold px-2 py-1 rounded-full min-w-[100px] text-center leading-tight whitespace-nowrap">
                 {benefit.highlight}
               </div>
               <div className="flex items-start space-x-4 mt-8">
