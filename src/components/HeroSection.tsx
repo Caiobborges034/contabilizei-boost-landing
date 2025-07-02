@@ -18,8 +18,8 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="pt-24 pb-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600 text-white">
-        <div className="container mx-auto px-4">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600 text-white relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Conteúdo principal */}
             <div className="max-w-4xl text-center lg:text-left">
@@ -54,7 +54,7 @@ const HeroSection = () => {
               <Button 
                 onClick={handleConsultoriaClick}
                 size="lg"
-                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-6 py-3 md:px-8 md:py-4 text-base md:text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in w-full sm:w-auto"
+                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-4 py-3 md:px-8 md:py-4 text-sm md:text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in w-full sm:w-auto"
               >
                 💡 Quero Minha Consultoria Gratuita!
               </Button>
@@ -64,17 +64,23 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* Imagem no canto direito */}
-            <div className="hidden lg:flex justify-center items-center relative">
-              <div className="relative overflow-hidden rounded-lg shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Casal feliz representando sucesso financeiro" 
-                  className="max-w-full h-auto animate-fade-in opacity-90 hover:opacity-100 transition-opacity duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-contabilizei-blue/10 to-transparent"></div>
-              </div>
-            </div>
+            {/* Espaço para a imagem no desktop - será posicionada absolutamente */}
+            <div className="hidden lg:block"></div>
+          </div>
+        </div>
+
+        {/* Imagem ocupando todo o canto direito */}
+        <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full">
+          <div className="relative w-full h-full">
+            <img 
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+              alt="Casal feliz usando soluções da Contabilizei" 
+              className="w-full h-full object-cover animate-fade-in"
+            />
+            {/* Gradiente de transição da esquerda para direita */}
+            <div className="absolute inset-0 bg-gradient-to-r from-contabilizei-blue via-contabilizei-blue/60 to-transparent"></div>
+            {/* Overlay sutil para integração */}
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-900/10 to-blue-900/20"></div>
           </div>
         </div>
       </section>
