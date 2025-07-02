@@ -77,10 +77,12 @@ const HeroSection = () => {
               alt="Casal feliz usando soluções da Contabilizei" 
               className="w-full h-full object-cover animate-fade-in"
             />
-            {/* Gradiente suave usando os mesmos tons da página */}
-            <div className="absolute inset-0 bg-gradient-to-r from-contabilizei-blue via-contabilizei-blue-light/40 via-blue-600/20 to-transparent"></div>
-            {/* Overlay adicional para integração perfeita */}
-            <div className="absolute inset-0 bg-gradient-to-br from-contabilizei-blue/30 via-transparent to-transparent"></div>
+            {/* Gradiente principal - transição fluida da esquerda para direita */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-600/70 via-blue-500/40 via-blue-400/20 to-transparent"></div>
+            {/* Gradiente complementar para suavizar ainda mais */}
+            <div className="absolute inset-0 bg-gradient-to-r from-contabilizei-blue-light/80 via-contabilizei-blue-light/50 via-blue-500/30 via-blue-400/15 to-transparent"></div>
+            {/* Overlay sutil para harmonizar cores */}
+            <div className="absolute inset-0 bg-gradient-to-br from-contabilizei-blue/20 via-transparent to-transparent"></div>
           </div>
         </div>
       </section>
