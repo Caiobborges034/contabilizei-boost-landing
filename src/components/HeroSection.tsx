@@ -65,12 +65,15 @@ const HeroSection = () => {
             </div>
 
             {/* Imagem no canto direito */}
-            <div className="hidden lg:flex justify-center items-center">
-              <img 
-                src="/lovable-uploads/29ccb0fa-30f9-4272-9c16-3bea5db5c08a.png" 
-                alt="Equipe Contabilizei" 
-                className="max-w-full h-auto rounded-lg shadow-lg animate-fade-in"
-              />
+            <div className="hidden lg:flex justify-center items-center relative">
+              <div className="relative overflow-hidden rounded-lg shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                  alt="Casal feliz representando sucesso financeiro" 
+                  className="max-w-full h-auto animate-fade-in opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-contabilizei-blue/10 to-transparent"></div>
+              </div>
             </div>
           </div>
         </div>
