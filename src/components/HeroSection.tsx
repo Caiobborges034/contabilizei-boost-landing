@@ -18,71 +18,48 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="pt-24 pb-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600 text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Conteúdo principal */}
-            <div className="max-w-4xl text-center lg:text-left">
-              {/* Badge de urgência */}
-              <div className="inline-flex items-center bg-contabilizei-orange/20 text-orange-100 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-                <Clock className="w-4 h-4 mr-2" />
-                Vagas Limitadas
-              </div>
-
-              {/* Headline principal */}
-              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
-                Consultoria <span className="text-contabilizei-orange">Gratuita</span> Exclusiva
-              </h1>
-              
-              <p className="text-lg md:text-xl lg:text-2xl mb-8 text-blue-100 animate-fade-in">
-                Para desafios que vão <strong>além do seu CNPJ</strong>
-              </p>
-
-              {/* Stats sociais */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8 animate-slide-in">
-                <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 text-sm">
-                  <Users className="w-4 h-4 mr-2 text-contabilizei-orange" />
-                  <span className="font-semibold">+200 Diagnósticos Realizados</span>
-                </div>
-                <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 text-sm">
-                  <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                  <span className="font-semibold">100% de Satisfação</span>
-                </div>
-              </div>
-
-              {/* CTA principal */}
-              <Button 
-                onClick={handleConsultoriaClick}
-                size="lg"
-                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-4 py-3 md:px-8 md:py-4 text-sm md:text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in w-full sm:w-auto"
-              >
-                💡 Quero Minha Consultoria Gratuita!
-              </Button>
-              
-              <p className="text-xs md:text-sm text-blue-200 mt-4 animate-fade-in">
-                ⚠️ Vagas limitadas - apenas para quem recebeu esta comunicação
-              </p>
+      <section className="pt-24 pb-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge de urgência */}
+            <div className="inline-flex items-center bg-contabilizei-orange/20 text-orange-100 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+              <Clock className="w-4 h-4 mr-2" />
+              Vagas Limitadas
             </div>
 
-            {/* Espaço para a imagem no desktop - será posicionada absolutamente */}
-            <div className="hidden lg:block"></div>
-          </div>
-        </div>
+            {/* Headline principal */}
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in">
+              Consultoria <span className="text-contabilizei-orange">Gratuita</span> Exclusiva
+            </h1>
+            
+            <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-fade-in">
+              Para desafios que vão <strong>além do seu CNPJ</strong>
+            </p>
 
-        {/* Imagem ocupando todo o canto direito */}
-        <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full">
-          <div className="relative w-full h-full">
-            <img 
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-              alt="Casal feliz usando soluções da Contabilizei" 
-              className="w-full h-full object-cover animate-fade-in"
-            />
-            {/* Gradiente principal - transição fluida da esquerda para direita */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-600/70 via-blue-500/40 via-blue-400/20 to-transparent"></div>
-            {/* Gradiente complementar para suavizar ainda mais */}
-            <div className="absolute inset-0 bg-gradient-to-r from-contabilizei-blue-light/80 via-contabilizei-blue-light/50 via-blue-500/30 via-blue-400/15 to-transparent"></div>
-            {/* Overlay sutil para harmonizar cores */}
-            <div className="absolute inset-0 bg-gradient-to-br from-contabilizei-blue/20 via-transparent to-transparent"></div>
+            {/* Stats sociais */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 animate-slide-in">
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                <Users className="w-5 h-5 mr-2 text-contabilizei-orange" />
+                <span className="font-semibold">+200 Diagnósticos Realizados</span>
+              </div>
+              <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="font-semibold">100% de Satisfação</span>
+              </div>
+            </div>
+
+            {/* CTA principal */}
+            <Button 
+              onClick={handleConsultoriaClick}
+              size="lg"
+              className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in"
+            >
+              💡 Quero Minha Consultoria Gratuita!
+            </Button>
+            
+            <p className="text-sm text-blue-200 mt-4 animate-fade-in">
+              ⚠️ Vagas limitadas - apenas para quem recebeu esta comunicação
+            </p>
           </div>
         </div>
       </section>

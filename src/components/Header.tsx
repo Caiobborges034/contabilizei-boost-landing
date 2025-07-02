@@ -19,16 +19,15 @@ const Header = () => {
             <img 
               src="https://i0.wp.com/tradutoriniciante.com.br/wp-content/uploads/2021/05/contabilizei-logo-fundo-transparente.png?fit=1042%2C500" 
               alt="Contabilizei Logo" 
-              className="h-8 md:h-10 w-auto"
+              className="h-10 w-auto"
             />
           </div>
           
           <Button 
             onClick={handleConsultoriaClick}
-            className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-3 py-2 md:px-6 md:py-2 text-sm md:text-base rounded-lg transition-all duration-300 hover:scale-105"
+            className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105"
           >
-            <span className="hidden sm:inline">Quero Minha Consultoria</span>
-            <span className="sm:hidden">Consultoria</span>
+            Quero Minha Consultoria
           </Button>
         </div>
       </header>
