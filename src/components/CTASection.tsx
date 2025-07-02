@@ -17,7 +17,7 @@ const CTASection = () => {
     <>
       <section id="consultoria-cta" className="py-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-white shadow-2xl animate-fade-in">
+          <Card className="max-w-4xl mx-auto p-6 md:p-8 lg:p-12 bg-white shadow-2xl animate-fade-in">
             <div className="text-center">
               {/* Badge de urgência */}
               <div className="inline-flex items-center bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -25,11 +25,11 @@ const CTASection = () => {
                 Vagas Limitadas
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-contabilizei-blue mb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-contabilizei-blue mb-6">
                 Garanta Sua Vaga na Consultoria Gratuita
               </h2>
               
-              <p className="text-lg text-contabilizei-gray mb-8 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-contabilizei-gray mb-8 max-w-2xl mx-auto">
                 Nossa consultoria é 100% gratuita e personalizada. Vamos entender suas necessidades atuais 
                 e apresentar soluções exclusivas que podem transformar seu negócio.
               </p>
@@ -44,7 +44,7 @@ const CTASection = () => {
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-contabilizei-gray">{benefit}</span>
+                    <span className="text-contabilizei-gray text-sm md:text-base">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -53,13 +53,13 @@ const CTASection = () => {
               <Button 
                 onClick={handleConsultoriaClick}
                 size="lg"
-                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-12 py-6 text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6"
+                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-6 py-4 md:px-12 md:py-6 text-lg md:text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6 w-full sm:w-auto"
               >
                 💡 Quero Minha Consultoria Gratuita Agora!
               </Button>
 
               {/* Indicador de urgência */}
-              <div className="flex items-center justify-center space-x-2 text-sm text-contabilizei-gray">
+              <div className="flex items-center justify-center space-x-2 text-xs md:text-sm text-contabilizei-gray">
                 <Clock className="w-4 h-4 text-contabilizei-orange" />
                 <span>Disponibilidade sujeita à agenda - Garanta já sua vaga!</span>
               </div>
