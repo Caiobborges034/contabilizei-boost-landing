@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -33,7 +34,6 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
             'Análise completa da sua situação fiscal',
             'Orientação sobre regime tributário ideal',
             'Esclarecimento de dúvidas sobre impostos',
-            'Planejamento tributário personalizado',
             'Suporte especializado sem custo adicional'
           ],
           highlight: '100% Gratuito',
@@ -47,10 +47,8 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           description: 'Transforme sua gestão financeira com desconto especial',
           details: [
             '3 reuniões personalizadas com consultor',
-            'Análise completa do fluxo de caixa',
             'Planejamento financeiro estratégico',
-            'Ferramentas de controle e monitoramento',
-            'Acompanhamento próximo por 3 meses'
+            'Ferramentas de controle e monitoramento'
           ],
           highlight: '62% de Desconto - De R$ 400 por R$ 150',
           color: 'text-contabilizei-orange'
@@ -66,7 +64,7 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
             'Aulas online e presenciais',
             'Personal trainer virtual',
             'Planos de treino personalizados',
-            'Sem taxa de adesão nos primeiros 2 meses'
+            '4 consultas com psicólogo e 1 com nutricionista por mês'
           ],
           highlight: '2 Meses Grátis',
           color: 'text-red-500'
@@ -80,7 +78,6 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           details: [
             'Criação de website profissional gratuito',
             'Configuração de redes sociais',
-            'Estratégia de marketing digital',
             'Gerenciamento de conteúdo',
             'Suporte técnico especializado'
           ],
@@ -95,7 +92,7 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           description: 'Seguros com desconto especial por 12 meses',
           details: [
             'Seguro empresarial com cobertura completa',
-            'Desconto de R$ 20/mês por 12 meses',
+            'Desconto de até R$ 20/mês por 12 meses',
             'Análise de riscos personalizada',
             'Suporte dedicado para sinistros',
             'Condições exclusivas para clientes'

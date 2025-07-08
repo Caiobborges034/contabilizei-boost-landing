@@ -58,7 +58,7 @@ const HeroSection = () => {
             </Button>
             
             <p className="text-sm text-blue-200 mt-4 animate-fade-in">
-              ⚠️ Vagas limitadas - apenas para quem recebeu esta comunicação
+              ⚠️ Vagas limitadas a depender da agenda dos consultores
             </p>
           </div>
         </div>

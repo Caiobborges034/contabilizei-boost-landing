@@ -18,7 +18,7 @@ const SocialProofSection = () => {
           </div>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200">
             <Quote className="w-8 h-8 text-contabilizei-orange mb-4 mx-auto" />
             <p className="text-contabilizei-gray mb-4 italic text-center text-lg">
@@ -29,10 +29,21 @@ const SocialProofSection = () => {
               <p className="text-sm text-contabilizei-gray">Consultoria Realizada</p>
             </div>
           </Card>
+
+          <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200" style={{ animationDelay: '0.2s' }}>
+            <Quote className="w-8 h-8 text-contabilizei-orange mb-4 mx-auto" />
+            <p className="text-contabilizei-gray mb-4 italic text-center text-lg">
+              "Muito bom papo e reforço a praticidade e clareza do painel da contabilizei para os usuários e todo suporte."
+            </p>
+            <div className="border-t pt-4 text-center">
+              <p className="font-semibold text-contabilizei-blue">Cliente Contabilizei</p>
+              <p className="text-sm text-contabilizei-gray">Consultoria Realizada</p>
+            </div>
+          </Card>
         </div>
 
         {/* Stats destacados */}
-        <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light rounded-2xl p-8 mt-12 text-white text-center">
+        <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light rounded-2xl p-8 text-white text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="animate-fade-in">
               <div className="text-4xl font-bold text-contabilizei-orange mb-2">+200</div>

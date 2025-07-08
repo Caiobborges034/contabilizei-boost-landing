@@ -35,18 +35,20 @@ const CTASection = () => {
               </p>
 
               {/* Benefícios listados */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-left max-w-2xl mx-auto">
-                {[
-                  "Diagnóstico completo da sua vida além do CNPJ",
-                  "Soluções personalizadas e parceiros exclusivos",
-                  "Benefícios especiais apenas para participantes",
-                  "Apoio em áreas além da contabilidade"
-                ].map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-contabilizei-gray">{benefit}</span>
-                  </div>
-                ))}
+              <div className="max-w-2xl mx-auto mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                  {[
+                    "Diagnóstico completo da sua vida além do CNPJ",
+                    "Soluções personalizadas e parceiros exclusivos",
+                    "Benefícios especiais apenas para participantes",
+                    "Apoio em áreas além da contabilidade"
+                  ].map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-contabilizei-gray">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* CTA Principal */}

@@ -70,7 +70,7 @@ const BenefitsSection = () => {
               Benefícios Exclusivos da Consultoria
             </h2>
             <p className="text-lg text-contabilizei-gray max-w-2xl mx-auto">
-              Durante nossa consultoria, você terá acesso a soluções, parceiros e benefícios exclusivos com condições especiais:
+              Durante nossa consultoria vamos te escutar ativamente para entender as dores que possui e conseguir alocar as melhores soluções parceiros e benefícios disponíveis com condições especiais:
             </p>
           </div>
 
