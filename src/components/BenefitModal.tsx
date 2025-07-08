@@ -1,7 +1,8 @@
-
+import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Calculator, TrendingUp, Heart, Megaphone, Shield, Cross, CheckCircle } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 interface BenefitModalProps {
   isOpen: boolean;
@@ -10,6 +11,17 @@ interface BenefitModalProps {
 }
 
 const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
+  const handleContactFormClick = () => {
+    console.log(`Clique no botão de contato do benefício: ${benefitType}`);
+    setIsContactFormOpen(true);
+  };
+
+  const handleContactFormClose = () => {
+    setIsContactFormOpen(false);
+  };
+
   const getBenefitContent = () => {
     switch (benefitType) {
       case 'contabilidade':
@@ -124,49 +136,53 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
   const IconComponent = content.icon;
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg">
-              <IconComponent className="w-6 h-6 text-white" />
+    <>
+      <Dialog open={isOpen} onOpenChange={onClose}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg">
+                <IconComponent className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <DialogTitle className="text-contabilizei-blue text-left">
+                  {content.title}
+                </DialogTitle>
+                <span className={`text-sm font-bold ${content.color}`}>
+                  {content.highlight}
+                </span>
+              </div>
             </div>
-            <div>
-              <DialogTitle className="text-contabilizei-blue text-left">
-                {content.title}
-              </DialogTitle>
-              <span className={`text-sm font-bold ${content.color}`}>
-                {content.highlight}
-              </span>
-            </div>
-          </div>
-          <DialogDescription className="text-left">
-            {content.description}
-          </DialogDescription>
-        </DialogHeader>
-        
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <h4 className="font-semibold text-contabilizei-blue">O que está incluído:</h4>
-            <ul className="space-y-2">
-              {content.details.map((detail, index) => (
-                <li key={index} className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-contabilizei-gray">{detail}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <DialogDescription className="text-left">
+              {content.description}
+            </DialogDescription>
+          </DialogHeader>
           
-          <Button 
-            onClick={onClose}
-            className="w-full bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold py-3"
-          >
-            Quero Aproveitar Esta Oportunidade!
-          </Button>
-        </div>
-      </DialogContent>
-    </Dialog>
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h4 className="font-semibold text-contabilizei-blue">O que está incluído:</h4>
+              <ul className="space-y-2">
+                {content.details.map((detail, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-contabilizei-gray">{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <Button 
+              onClick={handleContactFormClick}
+              className="w-full bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold py-3"
+            >
+              Quero Aproveitar Esta Oportunidade!
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+      
+      <ContactForm isOpen={isContactFormOpen} onClose={handleContactFormClose} />
+    </>
   );
 };
 
