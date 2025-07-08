@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,61 +18,33 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: ""
-  });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    console.log("Formulário enviado:", formData);
-    
-    // Simulação de envio para Google Sheets
-    // Substitua pela URL do seu Google Apps Script
-    try {
-      const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          timestamp: new Date().toISOString(),
-          source: 'Landing Page Consultoria'
-        }),
-      });
-      
-      if (response.ok) {
-        console.log('Dados enviados para Google Sheets com sucesso');
+  useEffect(() => {
+    if (!isOpen || isSubmitted) return;
+
+    const script = document.createElement("script");
+    script.src = "//js.hsforms.net/forms/v2.js";
+    script.async = true;
+    script.onload = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "21138480",
+          formId: "a2d684de-05ee-4a5b-99d7-7734a3b650f7",
+          region: "na1",
+          target: "#hubspot-form",
+          onFormSubmitted: () => {
+            setIsSubmitted(true);
+            setTimeout(() => {
+              setIsSubmitted(false);
+              onClose();
+            }, 2000);
+          }
+        });
       }
-    } catch (error) {
-      console.error('Erro ao enviar dados para Google Sheets:', error);
-    }
-    
-    setIsLoading(false);
-    setIsSubmitted(true);
-    
-    // Fechar após 2 segundos
-    setTimeout(() => {
-      setIsSubmitted(false);
-      onClose();
-      setFormData({ name: "", email: "", phone: "" });
-    }, 2000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+    };
+    document.body.appendChild(script);
+  }, [isOpen, isSubmitted, onClose]);
 
   if (isSubmitted) {
     return (
@@ -103,55 +75,8 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
             Preencha seus dados para que possamos entrar em contato e agendar sua consultoria exclusiva.
           </DialogDescription>
         </DialogHeader>
-        
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Nome Completo</Label>
-            <Input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Digite seu nome completo"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="email">E-mail</Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Digite seu e-mail"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="phone">Telefone</Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="Digite seu telefone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          
-          <Button 
-            type="submit" 
-            disabled={isLoading}
-            className="w-full bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold py-3"
-          >
-            {isLoading ? '⏳ Enviando...' : '💡 Solicitar Minha Consultoria Gratuita'}
-          </Button>
-        </form>
+
+        <div id="hubspot-form" className="pt-4" />
       </DialogContent>
     </Dialog>
   );
