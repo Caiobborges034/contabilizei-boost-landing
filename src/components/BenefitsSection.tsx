@@ -1,96 +1,111 @@
 
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Calculator, TrendingUp, Heart, Megaphone, Shield, Cross } from "lucide-react";
+import BenefitModal from "./BenefitModal";
 
 const BenefitsSection = () => {
+  const [selectedBenefit, setSelectedBenefit] = useState<string | null>(null);
+
   const benefits = [
     {
       icon: Calculator,
       title: "Contabilidade e Impostos",
       description: "Consultoria totalmente gratuita para te ajudar a sanar dúvidas e direcionar a resolução de problemas contábeis.",
       highlight: "100% Gratuito",
-      link: "/contabilidade"
+      type: "contabilidade"
     },
     {
       icon: TrendingUp,
       title: "Organização Financeira",
       description: "Acompanhamento com 3 reuniões, de R$ 400, por apenas R$ 150, com acompanhamento próximo pelo consultor.",
       highlight: "62% de Desconto",
-      link: "/organizacao-financeira"
+      type: "organizacao-financeira"
     },
     {
       icon: Heart,
       title: "Saúde e Bem-estar",
       description: "Acesso ao Total Pass (academias e exercícios em todo o Brasil) no plano multibenefícios sem acréscimo na mensalidade por 2 meses.",
       highlight: "2 Meses Grátis",
-      link: "/saude-bem-estar"
+      type: "saude-bem-estar"
     },
     {
       icon: Megaphone,
       title: "Marketing e Digital",
       description: "Criação de Website Gratuito e gerenciamento de redes sociais com condições especiais.",
       highlight: "Website Grátis",
-      link: "/marketing-digital"
+      type: "marketing-digital"
     },
     {
       icon: Shield,
       title: "Proteção e Seguridade",
       description: "Garanta seguros com a Contabilizei e obtenha descontos de até R$ 20 na mensalidade por 12 meses.",
       highlight: "Economize R$ 240/ano",
-      link: "/protecao-seguridade"
+      type: "protecao-seguridade"
     },
     {
       icon: Cross,
       title: "Plano de Saúde e Odontológico",
       description: "Condições especiais para contratação via CNPJ (até 30% mais barato do que contratar na PF).",
       highlight: "30% de Desconto",
-      link: "/plano-saude"
+      type: "plano-saude"
     }
   ];
 
-  const handleBenefitClick = (link: string) => {
-    console.log(`Clique no benefício: ${link}`);
-    // Aqui você pode implementar o tracking de cliques
-    window.open(link, '_blank');
+  const handleBenefitClick = (benefitType: string) => {
+    console.log(`Clique no benefício: ${benefitType}`);
+    setSelectedBenefit(benefitType);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedBenefit(null);
   };
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-contabilizei-blue mb-4">
-            Benefícios Exclusivos da Consultoria
-          </h2>
-          <p className="text-lg text-contabilizei-gray max-w-2xl mx-auto">
-            Durante nossa consultoria, você terá acesso a soluções, parceiros e benefícios exclusivos com condições especiais:
-          </p>
-        </div>
+    <>
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-contabilizei-blue mb-4">
+              Benefícios Exclusivos da Consultoria
+            </h2>
+            <p className="text-lg text-contabilizei-gray max-w-2xl mx-auto">
+              Durante nossa consultoria, você terá acesso a soluções, parceiros e benefícios exclusivos com condições especiais:
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <Card 
-              key={index} 
-              className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in bg-white border-l-4 border-l-contabilizei-orange relative cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => handleBenefitClick(benefit.link)}
-            >
-              <div className="absolute top-2 right-2 bg-contabilizei-orange text-black text-xs font-bold px-2 py-1 rounded-full min-w-[100px] text-center leading-tight whitespace-nowrap">
-                {benefit.highlight}
-              </div>
-              <div className="flex items-start space-x-4 mt-8">
-                <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg flex-shrink-0">
-                  <benefit.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <Card 
+                key={index} 
+                className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in bg-white border-l-4 border-l-contabilizei-orange relative cursor-pointer"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => handleBenefitClick(benefit.type)}
+              >
+                <div className="absolute top-2 right-2 bg-contabilizei-orange text-black text-xs font-bold px-2 py-1 rounded-full min-w-[100px] text-center leading-tight whitespace-nowrap">
+                  {benefit.highlight}
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-semibold text-contabilizei-blue mb-2 pr-4">{benefit.title}</h3>
-                  <p className="text-contabilizei-gray text-sm">{benefit.description}</p>
+                <div className="flex items-start space-x-4 mt-8">
+                  <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg flex-shrink-0">
+                    <benefit.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-contabilizei-blue mb-2 pr-4">{benefit.title}</h3>
+                    <p className="text-contabilizei-gray text-sm">{benefit.description}</p>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+      <BenefitModal 
+        isOpen={!!selectedBenefit} 
+        onClose={handleCloseModal}
+        benefitType={selectedBenefit || ''}
+      />
+    </>
   );
 };
 
