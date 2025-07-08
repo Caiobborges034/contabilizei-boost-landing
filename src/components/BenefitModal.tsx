@@ -97,7 +97,7 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
             'Suporte dedicado para sinistros',
             'Condições exclusivas para clientes'
           ],
-          highlight: 'Economize R$ 240/ano',
+          highlight: 'Economize até R$ 240/ano',
           color: 'text-blue-600'
         };
       

@@ -36,16 +36,16 @@ const CTASection = () => {
 
               {/* Benefícios listados */}
               <div className="max-w-2xl mx-auto mb-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     "Diagnóstico completo da sua vida além do CNPJ",
                     "Soluções personalizadas e parceiros exclusivos",
                     "Benefícios especiais apenas para participantes",
                     "Apoio em áreas além da contabilidade"
                   ].map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                    <div key={index} className="flex items-center justify-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-contabilizei-gray">{benefit}</span>
+                      <span className="text-contabilizei-gray text-center">{benefit}</span>
                     </div>
                   ))}
                 </div>
