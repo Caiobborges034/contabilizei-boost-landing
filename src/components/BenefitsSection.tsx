@@ -10,42 +10,42 @@ const BenefitsSection = () => {
   const benefits = [
     {
       icon: Calculator,
-      title: "Contabilidade e Impostos",
+      title: "Descubra onde você pode economizar pagando menos impostos",
       description: "Consultoria totalmente gratuita para te ajudar a sanar dúvidas e direcionar a resolução de problemas contábeis.",
       highlight: "100% Gratuito",
       type: "contabilidade"
     },
     {
       icon: TrendingUp,
-      title: "Organização Financeira",
+      title: "Evite surpresas no imposto e mantenha tudo sob controle",
       description: "Acompanhamento com 3 reuniões, de R$ 400, por apenas R$ 150, com acompanhamento próximo pelo consultor.",
       highlight: "62% de Desconto",
       type: "organizacao-financeira"
     },
     {
       icon: Heart,
-      title: "Saúde e Bem-estar",
+      title: "Cuide da sua saúde e bem-estar sem gastar mais",
       description: "Acesso ao Total Pass (academias e exercícios em todo o Brasil) no plano multibenefícios sem acréscimo na mensalidade por 2 meses.",
       highlight: "2 Meses Grátis",
       type: "saude-bem-estar"
     },
     {
       icon: Megaphone,
-      title: "Marketing e Digital",
+      title: "Tenha presença digital profissional sem investimento inicial",
       description: "Criação de Website Gratuito e gerenciamento de redes sociais com condições especiais.",
       highlight: "Website Grátis",
       type: "marketing-digital"
     },
     {
       icon: Shield,
-      title: "Proteção e Seguridade",
+      title: "Entenda como proteger sua renda em caso de imprevistos",
       description: "Garanta seguros com a Contabilizei e obtenha descontos de até R$ 20 na mensalidade por 12 meses.",
-      highlight: "Economize R$ 240/ano",
+      highlight: "Economize até R$ 240/ano",
       type: "protecao-seguridade"
     },
     {
       icon: Cross,
-      title: "Plano de Saúde e Odontológico",
+      title: "Acesse planos de saúde mais baratos através do seu CNPJ",
       description: "Condições especiais para contratação via CNPJ (até 30% mais barato do que contratar na PF).",
       highlight: "30% de Desconto",
       type: "plano-saude"

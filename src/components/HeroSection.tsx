@@ -29,11 +29,12 @@ const HeroSection = () => {
 
             {/* Headline principal */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in">
-              Consultoria <span className="text-contabilizei-orange">Gratuita</span> Exclusiva
+              Descubra benefícios e produtos que seu <span className="text-contabilizei-orange">CNPJ já pode aproveitar</span> — em uma consultoria gratuita e personalizada.
             </h1>
             
+            {/* Subheadline */}
             <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-fade-in">
-              Para desafios que vão <strong>além do seu CNPJ</strong>
+              Sem custo. Sem burocracia. <strong>Só as oportunidades que você está perdendo como PJ.</strong>
             </p>
 
             {/* Stats sociais */}
@@ -54,11 +55,12 @@ const HeroSection = () => {
               size="lg"
               className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in"
             >
-              💡 Quero Minha Consultoria Gratuita!
+              Quero descobrir agora
             </Button>
             
+            {/* Linha de urgência */}
             <p className="text-sm text-blue-200 mt-4 animate-fade-in">
-              ⚠️ Vagas limitadas a depender da agenda dos consultores
+              🔔 Atendimentos limitados por semana para garantir qualidade.
             </p>
           </div>
         </div>
