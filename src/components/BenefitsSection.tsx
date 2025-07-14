@@ -17,7 +17,7 @@ const BenefitsSection = () => {
     },
     {
       icon: TrendingUp,
-      title: "Evite surpresas no imposto e mantenha tudo sob controle",
+      title: "Organize suas finanças com um especialista com uma condição especial",
       description: "Acompanhamento com 3 reuniões, de R$ 400, por apenas R$ 150, com acompanhamento próximo pelo consultor.",
       highlight: "62% de Desconto",
       type: "organizacao-financeira"
