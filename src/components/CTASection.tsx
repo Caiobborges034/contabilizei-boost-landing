@@ -55,9 +55,10 @@ const CTASection = () => {
               <Button 
                 onClick={handleConsultoriaClick}
                 size="lg"
-                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-6 md:px-12 py-4 md:py-6 text-lg md:text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6"
+                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-4 md:px-12 py-4 md:py-6 text-sm md:text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6 w-full md:w-auto max-w-md md:max-w-none"
               >
-                💡 Quero Minha Consultoria Gratuita Agora!
+                <span className="block md:hidden">💡 Quero Minha Consultoria Gratuita!</span>
+                <span className="hidden md:block">💡 Quero Minha Consultoria Gratuita Agora!</span>
               </Button>
 
               {/* Indicador de urgência */}
