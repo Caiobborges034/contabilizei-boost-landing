@@ -55,7 +55,7 @@ const CTASection = () => {
               <Button 
                 onClick={handleConsultoriaClick}
                 size="lg"
-                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-12 py-6 text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6"
+                className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-6 md:px-12 py-4 md:py-6 text-lg md:text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6"
               >
                 💡 Quero Minha Consultoria Gratuita Agora!
               </Button>
