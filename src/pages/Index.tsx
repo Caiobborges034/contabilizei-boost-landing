@@ -6,6 +6,7 @@ import ReinforceCTASection from "@/components/ReinforceCTASection";
 import SocialProofSection from "@/components/SocialProofSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 };

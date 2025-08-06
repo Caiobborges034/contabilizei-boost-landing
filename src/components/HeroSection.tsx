@@ -1,44 +1,37 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Clock, Users, CheckCircle } from "lucide-react";
-import ContactForm from "./ContactForm";
+import { Clock, Users, CheckCircle, Calendar } from "lucide-react";
+import consultantHero from "@/assets/consultant-hero.jpg";
 
 const HeroSection = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
-  const scrollToConsultoria = () => {
-    const element = document.getElementById('consultoria-cta');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleConsultoriaClick = () => {
-    setIsFormOpen(true);
+  const handleCalendlyClick = () => {
+    window.open('https://calendly.com/d/cs3n-h4f-6h6/consultoria-de-negocios', '_blank');
   };
 
   return (
-    <>
-      <section className="pt-24 pb-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+    <section className="pt-24 pb-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600 text-white">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Content Column */}
+          <div className="animate-fade-in">
             {/* Badge de urgência */}
-            <div className="inline-flex items-center bg-contabilizei-orange/20 text-orange-100 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+            <div className="inline-flex items-center bg-contabilizei-orange/20 text-orange-100 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Clock className="w-4 h-4 mr-2" />
-              Vagas Limitadas
+              Condições Especiais
             </div>
 
             {/* Headline principal */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in">
-              Descubra benefícios e produtos que seu <span className="text-contabilizei-orange">CNPJ já pode aproveitar</span> — em uma consultoria gratuita e personalizada.
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+              Descubra benefícios e produtos que seu <span className="text-contabilizei-orange">CNPJ já pode aproveitar</span> em uma consultoria personalizada para você
             </h1>
             
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 animate-fade-in">
-              Sem custo. Sem burocracia. <strong>Só as oportunidades que você está perdendo como PJ.</strong>
+            <p className="text-lg md:text-xl mb-8 text-blue-100">
+              Converse com um Especialista de Negócios da Contabilizei para te ajudar a entender como crescer seu negócio e trazer mais saúde, segurança e planejamento financeiro para sua vida pessoal.
             </p>
 
             {/* Stats sociais */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 animate-slide-in">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-8 animate-slide-in">
               <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
                 <Users className="w-5 h-5 mr-2 text-contabilizei-orange" />
                 <span className="font-semibold">+200 Diagnósticos Realizados</span>
@@ -51,23 +44,31 @@ const HeroSection = () => {
 
             {/* CTA principal */}
             <Button 
-              onClick={handleConsultoriaClick}
+              onClick={handleCalendlyClick}
               size="lg"
-              className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-fade-in"
+              className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-6 md:px-8 py-4 text-base md:text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full md:w-auto"
             >
-              Quero descobrir agora
+              <Calendar className="w-5 h-5 mr-2" />
+              Agendar Consultoria Personalizada Agora
             </Button>
             
             {/* Linha de urgência */}
-            <p className="text-sm text-blue-200 mt-4 animate-fade-in">
-              🔔 Atendimentos limitados por semana para garantir qualidade.
+            <p className="text-sm text-blue-200 mt-4">
+              🔔 Condições especiais para clientes Contabilizei.
             </p>
           </div>
+
+          {/* Image Column */}
+          <div className="lg:flex justify-center animate-scale-in">
+            <img 
+              src={consultantHero} 
+              alt="Consultor de negócios da Contabilizei" 
+              className="w-full max-w-lg h-auto rounded-2xl shadow-2xl"
+            />
+          </div>
         </div>
-      </section>
-      
-      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
-    </>
+      </div>
+    </section>
   );
 };
 
