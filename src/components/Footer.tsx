@@ -1,4 +1,6 @@
 
+import contabilizeiLogo from "@/assets/contabilizei-logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-contabilizei-blue text-white py-8">
@@ -6,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center mb-4 md:mb-0">
             <img 
-              src="https://i0.wp.com/tradutoriniciante.com.br/wp-content/uploads/2021/05/contabilizei-logo-fundo-transparente.png?fit=1042%2C500" 
+              src={contabilizeiLogo}
               alt="Contabilizei Logo" 
               className="h-8 w-auto brightness-0 invert"
             />

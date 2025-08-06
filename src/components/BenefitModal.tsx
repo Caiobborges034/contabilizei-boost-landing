@@ -29,14 +29,14 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
         return {
           icon: Calculator,
           title: 'Contabilidade e Impostos',
-          description: 'Consultoria totalmente gratuita para resolver suas dúvidas contábeis',
+          description: 'Consultoria para resolver suas dúvidas contábeis',
           details: [
             'Análise completa da sua situação fiscal',
             'Orientação sobre regime tributário ideal',
             'Esclarecimento de dúvidas sobre impostos',
             'Suporte especializado sem custo adicional'
           ],
-          highlight: '100% Gratuito',
+          highlight: 'R$ 150,00',
           color: 'text-green-600'
         };
       
@@ -138,7 +138,7 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg">
+              <div className="bg-contabilizei-blue p-3 rounded-lg">
                 <IconComponent className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -169,7 +169,10 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
             </div>
             
             <Button 
-              onClick={handleContactFormClick}
+              onClick={() => {
+                window.open('https://calendly.com/d/cs3n-h4f-6h6/consultoria-de-negocios', '_blank');
+                onClose();
+              }}
               className="w-full bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold py-3"
             >
               Quero Aproveitar Esta Oportunidade!

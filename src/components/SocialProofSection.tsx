@@ -19,23 +19,23 @@ const SocialProofSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200">
+          <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200 flex flex-col min-h-[200px]">
             <Quote className="w-8 h-8 text-contabilizei-orange mb-4 mx-auto" />
-            <p className="text-contabilizei-gray mb-4 italic text-center text-lg">
+            <p className="text-contabilizei-gray mb-4 italic text-center text-lg flex-grow">
               "Ser ouvido é muito bom! Já fazia algum tempo que eu tinha vários pontos para comentar sobre a Contabilizei, que, de forma proativa, não daria essa visibilidade. Parabéns pela iniciativa."
             </p>
-            <div className="border-t pt-4 text-center">
+            <div className="border-t pt-4 text-center mt-auto">
               <p className="font-semibold text-contabilizei-blue">Cliente Contabilizei</p>
               <p className="text-sm text-contabilizei-gray">Consultoria Realizada</p>
             </div>
           </Card>
 
-          <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200" style={{ animationDelay: '0.2s' }}>
+          <Card className="p-8 hover:shadow-lg transition-all duration-300 animate-fade-in bg-gradient-to-br from-white to-gray-50 border border-gray-200 flex flex-col" style={{ animationDelay: '0.2s' }}>
             <Quote className="w-8 h-8 text-contabilizei-orange mb-4 mx-auto" />
-            <p className="text-contabilizei-gray mb-4 italic text-center text-lg">
+            <p className="text-contabilizei-gray mb-4 italic text-center text-lg flex-grow">
               "Muito bom papo e reforço a praticidade e clareza do painel da contabilizei para os usuários e todo suporte."
             </p>
-            <div className="border-t pt-4 text-center">
+            <div className="border-t pt-4 text-center mt-auto">
               <p className="font-semibold text-contabilizei-blue">Cliente Contabilizei</p>
               <p className="text-sm text-contabilizei-gray">Consultoria Realizada</p>
             </div>
@@ -43,7 +43,7 @@ const SocialProofSection = () => {
         </div>
 
         {/* Stats destacados */}
-        <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light rounded-2xl p-8 text-white text-center">
+        <div className="bg-contabilizei-blue rounded-2xl p-8 text-white text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="animate-fade-in">
               <div className="text-4xl font-bold text-contabilizei-orange mb-2">+200</div>

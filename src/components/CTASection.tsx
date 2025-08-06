@@ -9,7 +9,7 @@ const CTASection = () => {
   };
 
   return (
-    <section id="consultoria-cta" className="py-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600">
+    <section id="consultoria-cta" className="py-16 bg-contabilizei-blue">
       <div className="container mx-auto px-4">
         <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-white shadow-2xl animate-fade-in">
           <div className="text-center">

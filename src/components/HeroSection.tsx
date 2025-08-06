@@ -9,7 +9,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-contabilizei-blue via-contabilizei-blue-light to-blue-600 text-white">
+    <section className="pt-24 pb-16 bg-contabilizei-blue text-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Content Column */}
@@ -63,7 +63,7 @@ const HeroSection = () => {
             <img 
               src={consultantHero} 
               alt="Consultor de negócios da Contabilizei" 
-              className="w-full max-w-lg h-auto rounded-2xl shadow-2xl"
+              className="w-full max-w-lg h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl"
             />
           </div>
         </div>

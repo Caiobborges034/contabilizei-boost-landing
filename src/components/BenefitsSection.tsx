@@ -11,8 +11,8 @@ const BenefitsSection = () => {
     {
       icon: Calculator,
       title: "Descubra onde você pode economizar pagando menos impostos",
-      description: "Consultoria totalmente gratuita para te ajudar a sanar dúvidas e direcionar a resolução de problemas contábeis.",
-      highlight: "100% Gratuito",
+      description: "Consultoria para te ajudar a sanar dúvidas e direcionar a resolução de problemas contábeis.",
+      highlight: "R$ 150,00",
       type: "contabilidade"
     },
     {
@@ -86,7 +86,7 @@ const BenefitsSection = () => {
                   {benefit.highlight}
                 </div>
                 <div className="flex items-start space-x-4 mt-8">
-                  <div className="bg-gradient-to-r from-contabilizei-blue to-contabilizei-blue-light p-3 rounded-lg flex-shrink-0">
+                  <div className="bg-contabilizei-blue p-3 rounded-lg flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
