@@ -1,5 +1,5 @@
 
-import contabilizeiLogo from "@/assets/contabilizei-logo.png";
+const contabilizeiLogo = "/lovable-uploads/f6a2af14-1f73-4f3a-b9e4-78de34ed3b81.png";
 
 const Footer = () => {
   return (

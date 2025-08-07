@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
-import contabilizeiLogo from "@/assets/contabilizei-logo.png";
+const contabilizeiLogo = "/lovable-uploads/f6a2af14-1f73-4f3a-b9e4-78de34ed3b81.png";
 
 const Header = () => {
   const handleCalendlyClick = () => {

@@ -58,7 +58,7 @@ const CTASection = () => {
 
             {/* Indicador de urgência */}
             <div className="flex items-center justify-center space-x-2 text-sm">
-              <span className="text-2xl">🔔</span>
+              <span className="text-2xl">⚠️</span>
               <span className="text-black font-medium">Condições especiais para clientes Contabilizei - Garante já sua vaga!</span>
             </div>
           </div>
