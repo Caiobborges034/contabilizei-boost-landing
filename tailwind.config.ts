@@ -66,10 +66,11 @@ export default {
 				contabilizei: {
 					blue: '#063177',
 					'blue-light': '#083c92',
-					orange: '#04f7f7',
+					orange: 'hsl(var(--contabilizei-orange))',
 					'orange-light': '#36f8f8',
-					gray: '#6B7280',
-					'gray-light': '#F3F4F6'
+					gray: 'hsl(var(--contabilizei-gray))',
+					'gray-light': '#F3F4F6',
+					success: 'hsl(var(--contabilizei-success))'
 				}
 			},
 			fontFamily: {

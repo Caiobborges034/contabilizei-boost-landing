@@ -10,7 +10,7 @@ const Footer = () => {
             <img 
               src={contabilizeiLogo}
               alt="Contabilizei Logo" 
-              className="h-8 w-auto brightness-0 invert"
+              className="h-8 w-auto brightness-0 invert object-contain"
             />
           </div>
           

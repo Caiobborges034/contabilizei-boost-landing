@@ -37,6 +37,12 @@ All colors MUST be HSL.
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    
+    /* Contabilizei Colors */
+    --contabilizei-blue: 220 58% 23%;
+    --contabilizei-orange: 186 100% 50%;
+    --contabilizei-gray: 220 9% 46%;
+    --contabilizei-success: 120 60% 50%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +106,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-lato;
   }
 }

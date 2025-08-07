@@ -145,7 +145,7 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
                 <DialogTitle className="text-contabilizei-blue text-left">
                   {content.title}
                 </DialogTitle>
-                <span className={`text-sm font-bold ${content.color}`}>
+                <span className="text-sm font-bold text-contabilizei-success">
                   {content.highlight}
                 </span>
               </div>
