@@ -30,7 +30,12 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           icon: Calculator,
           title: 'Descubra onde você pode economizar pagando menos impostos',
           description: 'Nossa consultoria especializada vai identificar oportunidades de economia tributária para o seu negócio.',
-          details: 'Consultoria para resolver suas dúvidas contábeis',
+          details: [
+            'Análise completa da sua situação fiscal',
+            'Orientação sobre regime tributário ideal',
+            'Esclarecimento de dúvidas sobre impostos',
+            'Suporte especializado sem custo adicional'
+          ],
           highlight: 'R$ 150,00',
           color: 'text-green-600',
           whatsappLink: 'https://wa.me/5541998130416?text=Oi%2C%20gostaria%20de%20conversar%20com%20o%20consultor%20pois%20me%20interessei%20sobre%20quest%C3%B5es%20cont%C3%A1beis%2C%20entender%20onde%20posso%20economizar%20com%20impostos'
@@ -41,7 +46,11 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           icon: TrendingUp,
           title: 'Organize suas finanças com um especialista com uma condição especial',
           description: 'Tenha acesso a consultoria financeira personalizada para organizar e otimizar suas finanças pessoais e empresariais.',
-          details: 'Consultoria para resolver suas dúvidas contábeis',
+          details: [
+            '3 reuniões personalizadas com consultor',
+            'Planejamento financeiro estratégico',
+            'Ferramentas de controle e monitoramento'
+          ],
           highlight: 'R$ 150,00',
           color: 'text-green-600',
           whatsappLink: 'https://wa.me/5541998130416?text=Oi%2C%20quero%20falar%20com%20o%20consultor%20para%20me%20ajudar%20com%20quest%C3%B5es%20financeiras'
@@ -52,7 +61,13 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           icon: Heart,
           title: 'Cuide da sua saúde e bem-estar sem gastar mais',
           description: 'Acesse programas de bem-estar, academias e cuidados com a saúde através de benefícios corporativos.',
-          details: 'Consultoria para resolver suas dúvidas contábeis',
+          details: [
+            'Acesso a +15.000 academias no Brasil',
+            'Aulas online e presenciais',
+            'Personal trainer virtual',
+            'Planos de treino personalizados',
+            '4 consultas com psicólogo e 1 com nutricionista por mês'
+          ],
           highlight: 'R$ 150,00',
           color: 'text-green-600',
           whatsappLink: 'https://wa.me/5541998130416?text=Oi%2C%20quero%20falar%20com%20o%20consultor%20para%20me%20ajudar%20com%20quest%C3%B5es%20de%20bem-estar'
@@ -63,7 +78,12 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           icon: Megaphone,
           title: 'Tenha presença digital profissional sem investimento inicial',
           description: 'Desenvolva sua marca e presença digital com ferramentas e consultoria especializadas.',
-          details: 'Consultoria para resolver suas dúvidas contábeis',
+          details: [
+            'Criação de website profissional gratuito',
+            'Configuração de redes sociais',
+            'Gerenciamento de conteúdo',
+            'Suporte técnico especializado'
+          ],
           highlight: 'R$ 150,00',
           color: 'text-green-600',
           whatsappLink: 'https://wa.me/5541998130416?text=Oi%2C%20quero%20falar%20com%20o%20consultor%20para%20me%20ajudar%20com%20quest%C3%B5es%20de%20marketing'
@@ -74,7 +94,13 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           icon: Shield,
           title: 'Entenda como proteger sua renda em caso de imprevistos',
           description: 'Conheça soluções de proteção financeira e seguros adequados para sua realidade empresarial.',
-          details: 'Consultoria para resolver suas dúvidas contábeis',
+          details: [
+            'Seguro empresarial com cobertura completa',
+            'Desconto de até R$ 20/mês por 12 meses',
+            'Análise de riscos personalizada',
+            'Suporte dedicado para sinistros',
+            'Condições exclusivas para clientes'
+          ],
           highlight: 'R$ 150,00',
           color: 'text-green-600',
           whatsappLink: 'https://wa.me/5541998130416?text=Oi%2C%20quero%20falar%20com%20o%20consultor%20para%20me%20ajudar%20a%20garantir%20seguran%C3%A7a%20para%20minha%20renda'
@@ -85,7 +111,13 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           icon: Cross,
           title: 'Acesse planos de saúde mais baratos através do seu CNPJ',
           description: 'Descubra como usar seu CNPJ para ter acesso a planos de saúde com melhores condições.',
-          details: 'Consultoria para resolver suas dúvidas contábeis',
+          details: [
+            'Planos de saúde via CNPJ',
+            'Cobertura odontológica inclusa',
+            'Até 30% mais barato que pessoa física',
+            'Rede credenciada ampla',
+            'Atendimento especializado'
+          ],
           highlight: 'R$ 150,00',
           color: 'text-green-600',
           whatsappLink: 'https://wa.me/5541998130416?text=Oi%2C%20quero%20falar%20com%20o%20consultor%20para%20me%20ajudar%20com%20as%20melhores%20op%C3%A7%C3%B5es%20de%20plano%20de%20sa%C3%BAde'
@@ -131,11 +163,15 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
           
           <div className="space-y-4">
             <div className="space-y-2">
-              <h4 className="font-semibold text-contabilizei-blue">O que está incluído:</h4>
-              <div className="flex items-start space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-green-600 font-semibold">{content.details}</span>
-              </div>
+              <h4 className="font-semibold text-contabilizei-blue">O que está incluso:</h4>
+              <ul className="space-y-2">
+                {content.details.map((detail, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-green-600 font-semibold">{detail}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             
             <Button 
