@@ -4,8 +4,8 @@ import { Clock, Users, CheckCircle, Calendar } from "lucide-react";
 import consultantHero from "@/assets/consultant-hero.jpg";
 
 const HeroSection = () => {
-  const handleCalendlyClick = () => {
-    window.open('https://calendly.com/d/cs3n-h4f-6h6/consultoria-de-negocios', '_blank');
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5541998130416?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20com%20o%20Consultor%20de%20Neg%C3%B3cios%20para%20saber%20mais%20sobre%20as%20oportunidades%21', '_blank');
   };
 
   return (
@@ -44,13 +44,13 @@ const HeroSection = () => {
 
             {/* CTA principal */}
             <Button 
-              onClick={handleCalendlyClick}
+              onClick={handleWhatsAppClick}
               size="lg"
               className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-4 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full md:w-auto"
             >
               <Calendar className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              <span className="hidden md:inline">Agendar Consultoria Personalizada Agora</span>
-              <span className="md:hidden">Agendar Consultoria Agora</span>
+              <span className="hidden md:inline">Conversar com o Consultor Agora</span>
+              <span className="md:hidden">Conversar com Consultor</span>
             </Button>
             
             {/* Linha de urgência */}

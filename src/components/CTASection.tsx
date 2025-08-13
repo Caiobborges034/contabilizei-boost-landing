@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Clock, CheckCircle, AlertTriangle, Calendar } from "lucide-react";
 
 const CTASection = () => {
-  const handleCalendlyClick = () => {
-    window.open('https://calendly.com/d/cs3n-h4f-6h6/consultoria-de-negocios', '_blank');
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5541998130416?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20com%20o%20Consultor%20de%20Neg%C3%B3cios%20para%20saber%20mais%20sobre%20as%20oportunidades%21', '_blank');
   };
 
   return (
@@ -47,13 +47,13 @@ const CTASection = () => {
 
             {/* CTA Principal */}
             <Button 
-              onClick={handleCalendlyClick}
+              onClick={handleWhatsAppClick}
               size="lg"
               className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-4 md:px-12 py-4 md:py-6 text-sm md:text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl mb-6 w-full md:w-auto max-w-md md:max-w-none"
             >
               <Calendar className="w-5 h-5 mr-2" />
-              <span className="block md:hidden">Agendar Consultoria Agora</span>
-              <span className="hidden md:block">Agendar Consultoria Personalizada Agora</span>
+              <span className="block md:hidden">Conversar com Consultor</span>
+              <span className="hidden md:block">Conversar com o Consultor Agora</span>
             </Button>
 
             {/* Indicador de urgência */}

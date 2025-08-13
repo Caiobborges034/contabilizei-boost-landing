@@ -4,8 +4,8 @@ import { Calendar } from "lucide-react";
 const contabilizeiLogo = "/lovable-uploads/f6a2af14-1f73-4f3a-b9e4-78de34ed3b81.png";
 
 const Header = () => {
-  const handleCalendlyClick = () => {
-    window.open('https://calendly.com/d/cs3n-h4f-6h6/consultoria-de-negocios', '_blank');
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5541998130416?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20com%20o%20Consultor%20de%20Neg%C3%B3cios%20para%20saber%20mais%20sobre%20as%20oportunidades%21', '_blank');
   };
 
   return (
@@ -20,12 +20,12 @@ const Header = () => {
         </div>
         
         <Button 
-          onClick={handleCalendlyClick}
+          onClick={handleWhatsAppClick}
           className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-2 md:px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105 text-xs md:text-base flex-shrink-0 min-w-[90px] md:min-w-[140px]"
         >
           <Calendar className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-          <span className="hidden md:inline">Agendar Consultoria</span>
-          <span className="md:hidden">Agendar</span>
+          <span className="hidden md:inline">Conversar com Consultor</span>
+          <span className="md:hidden">Conversar</span>
         </Button>
       </div>
     </header>
